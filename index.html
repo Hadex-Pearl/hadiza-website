@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hadiza Yusuf — AI & CPS Safety Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #faf8f4;
+      --warm-white: #fffefb;
+      --ink: #1c1a17;
+      --ink-muted: #5a5650;
+      --ink-light: #9a9590;
+      --accent: #c0622a;
+      --accent-light: #f5ede6;
+      --accent-mid: #e8a882;
+      --border: #e8e4de;
+      --border-soft: #f0ece6;
+      --green: #3a6b4a;
+      --green-light: #eaf2ec;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250, 248, 244, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 58px;
+    }
+
+    .nav-name {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-size: 12px;
+      background: var(--ink);
+      color: var(--cream) !important;
+      padding: 7px 16px;
+      border-radius: 20px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--accent) !important; color: var(--cream) !important; }
+
+    /* ── HERO ── */
+    #about {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 100px 2.5rem 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block; width: 28px; height: 1px; background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-tagline {
+      font-size: 15px;
+      color: var(--ink-muted);
+      max-width: 480px;
+      margin-bottom: 1.8rem;
+      line-height: 1.75;
+    }
+
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 2.2rem;
+    }
+
+    .tag {
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 0.5px solid var(--border);
+      color: var(--ink-muted);
+      background: var(--warm-white);
+    }
+
+    .tag.accent {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-color: var(--accent-mid);
+    }
+
+    .hero-actions {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      padding: 11px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: #a0501f; transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--ink);
+      font-size: 13px;
+      padding: 11px 24px;
+      border-radius: 25px;
+      border: 0.5px solid var(--border);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
+
+    /* Hero card */
+    .hero-card {
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 120px; height: 120px;
+      background: var(--accent-light);
+      border-radius: 0 20px 0 120px;
+    }
+
+    .hero-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-light), var(--accent-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
+
+    .hero-card-name {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      position: relative; z-index: 1;
+    }
+
+    .hero-card-role {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+      position: relative; z-index: 1;
+    }
+
+    .stat-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin-bottom: 1.4rem;
+    }
+
+    .stat-box {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      color: var(--ink);
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: var(--ink-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .hero-card-links {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+
+    .chip-link {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: var(--cream);
+      color: var(--ink-muted);
+      text-decoration: none;
+      border: 0.5px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .chip-link:hover { background: var(--accent-light); color: var(--accent); }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 2.5rem; max-width: 1100px; margin: 0 auto; }
+
+    .section-divider {
+      width: 100%; height: 0.5px;
+      background: var(--border);
+      max-width: 1100px; margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex; align-items: baseline; gap: 16px;
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      min-width: 40px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    /* ── RESEARCH ── */
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .research-card {
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .research-card:hover {
+      border-color: var(--accent-mid);
+      transform: translateY(-2px);
+    }
+
+    .research-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 2rem;
+      align-items: center;
+      background: var(--accent-light);
+      border-color: var(--accent-mid);
+    }
+
+    .rc-badge {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .rc-badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .rc-title {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .rc-desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+
+    .rc-meta {
+      font-size: 11px;
+      color: var(--ink-light);
+      margin-top: 14px;
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+
+    .rc-meta span {
+      display: flex; align-items: center; gap: 4px;
+    }
+
+    .featured-aside {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      border: 0.5px solid var(--accent-mid);
+    }
+
+    .featured-aside .big-num {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      color: var(--accent);
+      display: block;
+    }
+
+    .featured-aside .aside-label {
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PUBLICATIONS ── */
+    .pub-list { display: flex; flex-direction: column; gap: 0; }
+
+    .pub-item {
+      padding: 1.4rem 0;
+      border-bottom: 0.5px solid var(--border-soft);
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1.2rem;
+      align-items: start;
+      transition: background 0.15s;
+    }
+
+    .pub-item:first-child { border-top: 0.5px solid var(--border-soft); }
+
+    .pub-num {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      color: var(--accent-mid);
+      line-height: 1.3;
+      text-align: right;
+    }
+
+    .pub-title {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .pub-meta {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+
+    .pub-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .pub-tag {
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: var(--green-light);
+      color: var(--green);
+      border: 0.5px solid #c3ddc9;
+    }
+
+    /* ── TEACHING ── */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .teach-card {
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+      transition: border-color 0.2s;
+    }
+
+    .teach-card:hover { border-color: var(--accent-mid); }
+
+    .teach-icon {
+      width: 36px; height: 36px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .teach-title {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .teach-where {
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .teach-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ── TALKS ── */
+    .talks-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .talk-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.4rem;
+      padding: 1.4rem;
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .talk-item:hover { border-color: var(--accent-mid); }
+
+    .talk-date {
+      font-size: 11px;
+      color: var(--ink-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-top: 2px;
+      line-height: 1.5;
+    }
+
+    .talk-type {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--accent-light);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .talk-title {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: var(--ink);
+      font-weight: 500;
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .talk-venue {
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    /* ── NEWS ── */
+    .news-list { display: flex; flex-direction: column; gap: 14px; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .news-month {
+      font-size: 11px;
+      color: var(--ink-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+
+    .news-text {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .news-text a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .news-text a:hover { text-decoration: underline; }
+
+    /* ── BLOG ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .blog-card {
+      background: var(--warm-white);
+      border: 0.5px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .blog-card:hover { transform: translateY(-3px); border-color: var(--accent-mid); }
+
+    .blog-header {
+      height: 90px;
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .blog-body { padding: 1.2rem; }
+
+    .blog-cat {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .blog-title {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .blog-excerpt {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .blog-footer {
+      padding: 0.8rem 1.2rem;
+      border-top: 0.5px solid var(--border-soft);
+      font-size: 11px;
+      color: var(--ink-light);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .blog-read {
+      font-size: 11px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── CV ── */
+    .cv-section { margin-bottom: 2.5rem; }
+
+    .cv-section-title {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+      padding-bottom: 8px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .cv-entry {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .cv-year {
+      font-size: 12px;
+      color: var(--ink-light);
+      padding-top: 2px;
+      line-height: 1.5;
+    }
+
+    .cv-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .cv-org {
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .cv-detail {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .cv-gpa {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--green-light);
+      color: var(--green);
+      border: 0.5px solid #c3ddc9;
+      margin-top: 4px;
+    }
+
+    .award-item {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 8px 0;
+      border-bottom: 0.5px solid var(--border-soft);
+      font-size: 13px;
+    }
+
+    .award-year {
+      font-size: 11px; color: var(--ink-light);
+      min-width: 36px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .skill-group-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .skill-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--cream);
+      border: 0.5px solid var(--border);
+      color: var(--ink-muted);
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 24px;
+      margin: 0 2rem 4rem;
+      max-width: 1060px;
+      margin-left: auto; margin-right: auto;
+      padding: 4rem;
+    }
+
+    #contact h2 { color: var(--cream); margin-bottom: 8px; }
+
+    .contact-sub {
+      font-size: 15px;
+      color: #9a9590;
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-link-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 1rem 1.2rem;
+      background: rgba(255,255,255,0.05);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .contact-link-item:hover { background: rgba(192,98,42,0.15); border-color: var(--accent-mid); }
+
+    .contact-icon {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+
+    .contact-link-label {
+      font-size: 11px;
+      color: #666;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-link-val {
+      font-size: 13px;
+      color: var(--cream);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 12px;
+      color: var(--ink-light);
+      border-top: 0.5px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-left > * {
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+    .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+    .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
+    .hero-left > *:nth-child(5) { animation-delay: 0.5s; }
+
+    .hero-card { animation: fadeUp 0.6s ease 0.35s both; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { display: none; }
+      #about, section { padding: 80px 1.2rem 60px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .research-grid { grid-template-columns: 1fr; }
+      .research-card.featured { grid-template-columns: 1fr; }
+      .teaching-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .cv-entry { grid-template-columns: 1fr; gap: 4px; }
+      #contact { padding: 2.5rem 1.5rem; margin: 0 1rem 2rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#about" class="nav-name">Hadiza Yusuf</a>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT / HERO -->
+<section id="about" style="padding-top: 100px;">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <p class="hero-eyebrow">PhD Candidate · University of Michigan-Dearborn</p>
+      <h1>Hadiza<br>Umar Yusuf</h1>
+      <p class="hero-tagline">
+        I research the safety and reliability of AI-enabled Cyber-Physical Systems — building techniques that help catch faults before they cause real-world harm. Grounded in curiosity, faith, and a genuine love for teaching and people.
+      </p>
+      <div class="hero-tags">
+        <span class="tag accent">AI Safety</span>
+        <span class="tag accent">Cyber-Physical Systems</span>
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">Software Verification</span>
+        <span class="tag">Trustworthy AI</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#research" class="btn-primary">View My Research</a>
+        <a href="assets/Hadiza_Yusuf_CV.pdf" class="btn-secondary" target="_blank">Download CV</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-avatar">HY</div>
+      <p class="hero-card-name">Hadiza Umar Yusuf</p>
+      <p class="hero-card-role">AI &amp; CPS Safety Researcher</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">3.95</div>
+          <div class="stat-label">PhD GPA</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">7</div>
+          <div class="stat-label">Awards</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Teaching</div>
+        </div>
+      </div>
+
+      <div class="hero-card-links">
+        <a href="mailto:hyusuf@umich.edu" class="chip-link">✉ Email</a>
+        <a href="https://www.linkedin.com/in/hyusuf7" target="_blank" class="chip-link">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=Hadiza+Yusuf" target="_blank" class="chip-link">Scholar</a>
+        <a href="https://github.com/Hadex-Pearl1" target="_blank" class="chip-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-header">
+    <span class="section-label">01</span>
+    <h2>Research</h2>
+  </div>
+
+  <div class="research-grid">
+    <div class="research-card featured">
+      <div>
+        <div class="rc-badge"><span class="dot"></span> Current — Active Research</div>
+        <p class="rc-title">Falsification of AI-enabled Cyber-Physical Systems</p>
+        <p class="rc-desc">Developing a falsification technique that combines stochastic optimization and reinforcement learning to improve fault detection in AI-enabled CPS. Conducting empirical analysis to categorize CPS models and identify verification challenges specific to AI systems.</p>
+        <div class="rc-meta">
+          <span>📍 University of Michigan-Dearborn</span>
+          <span>👩‍🏫 Supervisor: Prof. Khouloud Gaaloal</span>
+          <span>📅 Sept. 2024 – Present</span>
+        </div>
+      </div>
+      <div class="featured-aside">
+        <span class="big-num">CPS</span>
+        <span class="aside-label">Safety &amp; Verification</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-badge">Completed · UM-D</div>
+      <p class="rc-title">Counterfactual-Guided Debugging of Cyber-Physical Systems (DeCaF)</p>
+      <p class="rc-desc">Developed a framework for debugging CPS using counterfactual-guided explanations that identify minimal input changes preventing system failures. Evaluated across multiple Simulink CPS benchmarks.</p>
+      <div class="rc-meta">
+        <span>👩‍🏫 Prof. Khouloud Gaaloal</span>
+        <span>📅 May – Aug. 2025 · Submitted</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-badge">Completed · CMU Africa</div>
+      <p class="rc-title">Prosthetics Design for Low-Resource Environments</p>
+      <p class="rc-desc">Improving access to customized prosthetics using smartphone-based digital reconstruction and data-driven prediction of mechanical functionality in resource-constrained communities.</p>
+      <div class="rc-meta">
+        <span>👩‍🏫 Prof. Moise Busogi</span>
+        <span>📅 May 2023 – Aug. 2024</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-badge">Completed · CMU Africa</div>
+      <p class="rc-title">Data-Driven Material Prediction for 3D Printing</p>
+      <p class="rc-desc">Predicted material properties of 3D-printed parts using multi-layer perceptron (MLP) models linking specimen test results, printing conditions, and geometry. Generated and pre-processed simulation data under varying parameters.</p>
+      <div class="rc-meta">
+        <span>👩‍🏫 Prof. Conrad Tucker</span>
+        <span>📅 Jan. – May 2024</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-badge">Completed · CMU Africa</div>
+      <p class="rc-title">Adaptive Education for African Languages (ED-GPT)</p>
+      <p class="rc-desc">Constructed an LLM pipeline for context-based answer generation for high school STEM subjects in Kinyarwanda. Achieved 98% accuracy with sentence similarity evaluation.</p>
+      <div class="rc-meta">
+        <span>👩‍🏫 Prof. Azzizuddin Biyabani</span>
+        <span>📅 Oct. – Dec. 2023</span>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <div class="rc-badge">Completed · CMU Africa</div>
+      <p class="rc-title">DTMF Demodulation using TinyML</p>
+      <p class="rc-desc">Designed an experiment for accurate DTMF signal decoding using power spectral analysis. Captured and processed real-time signals on Arduino Nano Sense BLE and Raspberry Pi.</p>
+      <div class="rc-meta">
+        <span>👩‍🏫 Prof. Mike Perkins</span>
+        <span>📅 May – Aug. 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-header">
+    <span class="section-label">02</span>
+    <h2>Publications</h2>
+  </div>
+
+  <div class="pub-list">
+    <div class="pub-item">
+      <div class="pub-num">01</div>
+      <div>
+        <p class="pub-title">Inverse-Prediction of Material Property in Fused Filament Fabrication / Fused Deposition Modeling</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">3D Printing</span><span class="pub-tag">Machine Learning</span><span class="pub-tag">Material Science</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">02</div>
+      <div>
+        <p class="pub-title">Increasing Accessibility of 3D-Printed Customized Prosthetics in Resource-Constrained Communities</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">Prosthetics</span><span class="pub-tag">3D Printing</span><span class="pub-tag">Accessibility</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">03</div>
+      <div>
+        <p class="pub-title">Accessible Digital Reconstruction and Mechanical Prediction of 3D-Printed Prosthetics</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">Computer Vision</span><span class="pub-tag">Prosthetics</span><span class="pub-tag">Digital Reconstruction</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">04</div>
+      <div>
+        <p class="pub-title">Towards Reliable DTMF Recognition: A TinyML Approach</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2023</p>
+        <div class="pub-tags"><span class="pub-tag">TinyML</span><span class="pub-tag">Signal Processing</span><span class="pub-tag">Edge AI</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">05</div>
+      <div>
+        <p class="pub-title">Orientation and its Significance on Skill Development: A Case Study of AcadoPreneurship Industry Immersion Programme for Students (IIP4S)</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2022</p>
+        <div class="pub-tags"><span class="pub-tag">Education</span><span class="pub-tag">Skill Development</span></div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">06</div>
+      <div>
+        <p class="pub-title">Counterfactual-Guided Debugging of Cyber-Physical Systems (DeCaF)</p>
+        <p class="pub-meta">Yusuf, H. U., et al. · 2025 · Submitted for publication</p>
+        <div class="pub-tags"><span class="pub-tag">CPS</span><span class="pub-tag">Debugging</span><span class="pub-tag">Counterfactual AI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="section-header">
+    <span class="section-label">03</span>
+    <h2>Teaching</h2>
+  </div>
+
+  <div class="teaching-grid">
+    <div class="teach-card">
+      <div class="teach-icon">📐</div>
+      <p class="teach-title">Applied Stochastic Processes</p>
+      <p class="teach-where">Carnegie Mellon University Africa · Fall 2023</p>
+      <p class="teach-desc">Graduate Teaching Assistant for 53 graduate students. Held weekly recitations, graded homework, and provided academic support.</p>
+    </div>
+    <div class="teach-card">
+      <div class="teach-icon">📊</div>
+      <p class="teach-title">Mathematics & Statistics</p>
+      <p class="teach-where">Federal University of Technology Minna · 2021–2022</p>
+      <p class="teach-desc">e-Tutor for 100 and 200-level computer science students. Average student rating: 4/5. Synchronous and asynchronous support.</p>
+    </div>
+    <div class="teach-card">
+      <div class="teach-icon">💻</div>
+      <p class="teach-title">Programming & Web Design</p>
+      <p class="teach-where">Merrion IT (New Horizons College) · 2020–2022</p>
+      <p class="teach-desc">Instructed 70+ high school students in Python, Blender, and web design. Guided hands-on project-based learning.</p>
+    </div>
+    <div class="teach-card">
+      <div class="teach-icon">🔢</div>
+      <p class="teach-title">BASIC Programming & Numerical Analysis</p>
+      <p class="teach-where">College of Education Katsina-Ala · 2019–2020</p>
+      <p class="teach-desc">Assisted in teaching, evaluating, and mentoring Computer Science students in BASIC, Microsoft Packages, and Numerical Analysis.</p>
+    </div>
+    <div class="teach-card">
+      <div class="teach-icon">🔬</div>
+      <p class="teach-title">Science (Chemistry, Basic Science & Technology)</p>
+      <p class="teach-where">Talented Heroes Academy · 2013</p>
+      <p class="teach-desc">Taught high school STEM subjects. Average student rating: 4.3/5.</p>
+    </div>
+    <div class="teach-card">
+      <div class="teach-icon">🤖</div>
+      <p class="teach-title">AI Systems Design (EdgeML Labs)</p>
+      <p class="teach-where">Carnegie Mellon University Africa · Summer 2023</p>
+      <p class="teach-desc">Developed and enhanced labs for the AI Systems Design course (EdgeML piece) as a graduate intern.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TALKS -->
+<section id="talks">
+  <div class="section-header">
+    <span class="section-label">04</span>
+    <h2>Talks &amp; Presentations</h2>
+  </div>
+
+  <div class="talks-list">
+    <div class="talk-item">
+      <div class="talk-date">March<br>2026</div>
+      <div>
+        <span class="talk-type">Session Speaker</span>
+        <p class="talk-title">Emerging Trends in Verification of AI-enabled Cyber-Physical Systems</p>
+        <p class="talk-venue">International Conference on Machine Learning, Artificial Intelligence and Data Science · <a href="#" style="color: var(--accent); text-decoration: none;">Speaker Profile</a></p>
+      </div>
+    </div>
+    <div class="talk-item">
+      <div class="talk-date">Aug.<br>2022</div>
+      <div>
+        <span class="talk-type">Presenter</span>
+        <p class="talk-title">Searching for and Choosing Graduate Schools</p>
+        <p class="talk-venue">Ignite Research Academy Webinar · <a href="#" style="color: var(--accent); text-decoration: none;">Watch Video</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="section-header">
+    <span class="section-label">05</span>
+    <h2>News</h2>
+  </div>
+
+  <div class="news-list">
+    <div class="news-item">
+      <div class="news-month">Mar 2026</div>
+      <p class="news-text">🎤 Invited as <strong>Session Speaker</strong> at the International Conference on ML, AI and Data Science — presenting on verification of AI-enabled CPS.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Oct 2025</div>
+      <p class="news-text">🤝 Volunteered at the <strong>28th MODELS 2025 Conference</strong>, Grand Rapids, MI.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Aug 2025</div>
+      <p class="news-text">🙌 Joined the <strong>LifeWise Academy Dearborn</strong> as a Leadership Board Member.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">May 2025</div>
+      <p class="news-text">📝 <strong>DeCaF paper submitted</strong> — Counterfactual-Guided Debugging of Cyber-Physical Systems.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Apr 2025</div>
+      <p class="news-text">🎓 Joined <strong>Wolverine Mentors Collective</strong> as a graduate student mentor.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">May 2024</div>
+      <p class="news-text">📰 Featured in a Mastercard Foundation Impact Story: <a href="https://mastercardfdn.org" target="_blank">"Everyone has something to give in their own little space"</a>.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">May 2024</div>
+      <p class="news-text">🏆 Received the <strong>Mastercard Foundation Scholars Impact Award 2024</strong> and the <strong>Lakshimi Subramanian CMU-Africa Student Excellence Award</strong>.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Sep 2024</div>
+      <p class="news-text">🎉 Started <strong>PhD in Computer &amp; Information Sciences</strong> at University of Michigan-Dearborn. CQPA: 3.95/4.0.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-header">
+    <span class="section-label">06</span>
+    <h2>Blog</h2>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-header">🤖</div>
+      <div class="blog-body">
+        <p class="blog-cat">AI Safety</p>
+        <p class="blog-title">Why Falsification Matters: Testing AI Systems Before They Fail in the Real World</p>
+        <p class="blog-excerpt">How stochastic optimization and RL can be combined to find safety violations in autonomous systems before deployment...</p>
+      </div>
+      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-header">🦾</div>
+      <div class="blog-body">
+        <p class="blog-cat">Research Journey</p>
+        <p class="blog-title">From Nigeria to Rwanda to Michigan: Navigating Global STEM Academia as an African Researcher</p>
+        <p class="blog-excerpt">Lessons learned about finding mentors, applying for scholarships, and building a research identity across continents...</p>
+      </div>
+      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-header">🎓</div>
+      <div class="blog-body">
+        <p class="blog-cat">Teaching & Mentorship</p>
+        <p class="blog-title">What 10 Years of Teaching Taught Me About Learning</p>
+        <p class="blog-excerpt">From high school classrooms in Niger State to graduate labs at CMU — reflections on what it really means to teach...</p>
+      </div>
+      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CV -->
+<section id="cv">
+  <div class="section-header">
+    <span class="section-label">07</span>
+    <h2>Curriculum Vitae</h2>
+  </div>
+
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
+    <a href="assets/Hadiza_Yusuf_CV.pdf" class="btn-primary" target="_blank">Download Full CV (PDF)</a>
+  </div>
+
+  <div class="cv-section">
+    <p class="cv-section-title">Education</p>
+    <div class="cv-entry">
+      <div class="cv-year">Sept. 2024 –<br>April 2028</div>
+      <div>
+        <p class="cv-title">Doctor of Philosophy — Computer &amp; Information Sciences</p>
+        <p class="cv-org">University of Michigan-Dearborn, MI, United States</p>
+        <span class="cv-gpa">CQPA: 3.95 / 4.0</span>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-year">Aug. 2022 –<br>May 2024</div>
+      <div>
+        <p class="cv-title">MS — Engineering Artificial Intelligence</p>
+        <p class="cv-org">Carnegie Mellon University Africa, Kigali, Rwanda</p>
+        <span class="cv-gpa">CQPA: 3.78 / 4.0</span>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-year">Feb. 2014 –<br>Oct. 2018</div>
+      <div>
+        <p class="cv-title">B.Tech — Mathematics (minor: Statistics)</p>
+        <p class="cv-org">Federal University of Technology Minna, Nigeria</p>
+        <span class="cv-gpa">CGPA: 4.58 / 5.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <p class="cv-section-title">Honors &amp; Scholarships</p>
+    <div class="award-item"><span class="award-year">2024</span> Lakshimi Subramanian CMU-Africa Student Excellence Award</div>
+    <div class="award-item"><span class="award-year">2024</span> Mastercard Foundation Scholars Impact Award</div>
+    <div class="award-item"><span class="award-year">2023</span> Future Leaders Climate, Aspen Institutes</div>
+    <div class="award-item"><span class="award-year">2022</span> Mastercard Foundation Scholarship</div>
+    <div class="award-item"><span class="award-year">2022</span> InterMaths Erasmus Mundus Partial Scholarship</div>
+    <div class="award-item"><span class="award-year">2018</span> Best Female Graduating Student — School of Physical Sciences, FUTM</div>
+    <div class="award-item"><span class="award-year">2018</span> Silver Medal — National Mathematical Competition for University Students (NMC Abuja)</div>
+  </div>
+
+  <div class="cv-section">
+    <p class="cv-section-title">Skills</p>
+    <div class="skills-grid">
+      <div>
+        <p class="skill-group-title">Proficient</p>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">MATLAB</span>
+          <span class="skill-pill">Simulink</span>
+          <span class="skill-pill">PyTorch</span>
+          <span class="skill-pill">TensorFlow</span>
+          <span class="skill-pill">scikit-learn</span>
+          <span class="skill-pill">pandas</span>
+          <span class="skill-pill">NumPy</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-title">Familiar</p>
+        <div class="skill-pills">
+          <span class="skill-pill">C/C++</span>
+          <span class="skill-pill">Spark</span>
+          <span class="skill-pill">Hadoop</span>
+          <span class="skill-pill">OpenCV</span>
+          <span class="skill-pill">NLTK</span>
+          <span class="skill-pill">spaCy</span>
+          <span class="skill-pill">AWS</span>
+          <span class="skill-pill">Azure</span>
+          <span class="skill-pill">GCP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" style="background: var(--ink); border-radius: 24px; max-width: 1060px; margin: 2rem auto 4rem; padding: 4rem; color: var(--cream);">
+  <div class="section-header" style="margin-bottom: 0.5rem;">
+    <span class="section-label" style="color: #444;">08</span>
+    <h2 style="color: var(--cream);">Get in Touch</h2>
+  </div>
+  <p class="contact-sub">I'm always open to research collaborations, speaking opportunities, and mentoring. Let's connect and see what we can build together.</p>
+
+  <div class="contact-grid">
+    <a href="mailto:hyusuf@umich.edu" class="contact-link-item">
+      <div class="contact-icon">✉</div>
+      <div>
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-val">hyusuf@umich.edu</span>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/hyusuf7" target="_blank" class="contact-link-item">
+      <div class="contact-icon">in</div>
+      <div>
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-val">linkedin.com/in/hyusuf7</span>
+      </div>
+    </a>
+    <a href="https://github.com/Hadex-Pearl1" target="_blank" class="contact-link-item">
+      <div class="contact-icon">⌥</div>
+      <div>
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-val">Hadex-Pearl1</span>
+      </div>
+    </a>
+    <a href="https://scholar.google.com/citations" target="_blank" class="contact-link-item">
+      <div class="contact-icon">🎓</div>
+      <div>
+        <span class="contact-link-label">Google Scholar</span>
+        <span class="contact-link-val">Hadiza Yusuf</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Hadiza Umar Yusuf · Built with care · Hosted on Netlify</p>
+</footer>
+
+</body>
+</html>
