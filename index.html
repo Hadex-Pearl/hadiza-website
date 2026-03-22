@@ -189,6 +189,7 @@
       padding: 2rem;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .hero-card::before {
@@ -200,7 +201,7 @@
     }
 
     .hero-avatar {
-      width: 180px; height: 180px;
+      width: 320px; height: 320px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent-light), var(--accent-mid));
       display: flex; align-items: center; justify-content: center;
@@ -210,6 +211,8 @@
       margin-bottom: 1.2rem;
       position: relative; z-index: 1;
       overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-card-name {
@@ -257,6 +260,7 @@
 
     .hero-card-links {
       display: flex; gap: 8px; flex-wrap: wrap;
+      justify-content: center;
     }
 
     .chip-link {
@@ -852,7 +856,6 @@
     <li><a href="#talks">Talks</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#blog">Blog</a></li>
-    <li><a href="#cv">CV</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -864,7 +867,9 @@
       <p class="hero-eyebrow">PhD Candidate · University of Michigan-Dearborn</p>
       <h1>Hadiza<br>Umar Yusuf</h1>
       <p class="hero-tagline">
-        I research the safety and reliability of AI-enabled Cyber-Physical Systems — building techniques that help catch faults before they cause real-world harm. Grounded in curiosity, faith, and a genuine love for teaching and people.
+        I am Hadiza Umar Yusuf, a doctoral candidate in Computer & Information Sciences at the <strong>University of Michigan-Dearborn</strong>, and a Graduate Research Assistant at the <strong>AISE-CPS Lab</strong>. I am passionate about building safer, more reliable AI systems — particularly for cyber-physical systems that operate in the real world where failures have real consequences.
+        <br><br>
+        My research interests include <strong>AI Safety</strong>, <strong>Falsification of AI-enabled Cyber-Physical Systems</strong>, <strong>Reinforcement Learning</strong>, and <strong>Trustworthy AI</strong>. I am dedicated to developing verification and testing techniques that ensure AI systems behave as intended, even in complex and safety-critical environments.
       </p>
       <div class="hero-tags">
         <span class="tag accent">AI Safety</span>
@@ -890,8 +895,8 @@
       <div class="hero-card-links">
         <a href="mailto:hyusuf@umich.edu" class="chip-link">✉ Email</a>
         <a href="https://www.linkedin.com/in/hyusuf7" target="_blank" class="chip-link">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=Hadiza+Yusuf" target="_blank" class="chip-link">Scholar</a>
-        <a href="https://github.com/Hadex-Pearl1" target="_blank" class="chip-link">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=zffZglgAAAAJ&hl=en&authuser=1" target="_blank" class="chip-link">Scholar</a>
+        <a href="https://github.com/Hadex-Pearl" target="_blank" class="chip-link">GitHub</a>
       </div>
     </div>
   </div>
@@ -989,49 +994,63 @@
     <div class="pub-item">
       <div class="pub-num">01</div>
       <div>
-        <p class="pub-title">Inverse-Prediction of Material Property in Fused Filament Fabrication / Fused Deposition Modeling</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
-        <div class="pub-tags"><span class="pub-tag">3D Printing</span><span class="pub-tag">Machine Learning</span><span class="pub-tag">Material Science</span></div>
+        <p class="pub-title">Towards Counterfactual Explanation and Assertion Inference for CPS Debugging</p>
+        <p class="pub-meta">Ghazal, Z., Yusuf, H. U., Gaaloul, K. · <em>IEEE International Conference on Software Testing, Verification and Validation (ICST 2026)</em> · Accepted</p>
+        <div class="pub-tags"><span class="pub-tag">CPS</span><span class="pub-tag">Debugging</span><span class="pub-tag">Counterfactual AI</span></div>
       </div>
     </div>
+
     <div class="pub-item">
       <div class="pub-num">02</div>
       <div>
-        <p class="pub-title">Increasing Accessibility of 3D-Printed Customized Prosthetics in Resource-Constrained Communities</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
-        <div class="pub-tags"><span class="pub-tag">Prosthetics</span><span class="pub-tag">3D Printing</span><span class="pub-tag">Accessibility</span></div>
+        <p class="pub-title">Navigating the Shift: Architectural Transformations and Emerging Verification Demands in AI-Enabled Cyber-Physical Systems</p>
+        <p class="pub-meta">Yusuf, H. U., Gaaloul, K. · <em>IEEE/ACM 4th International Conference on AI Engineering – Software Engineering for AI (CAIN 2025)</em> · 2025</p>
+        <div class="pub-tags"><span class="pub-tag">AI Safety</span><span class="pub-tag">CPS Verification</span><span class="pub-tag">Software Engineering</span></div>
       </div>
     </div>
+
     <div class="pub-item">
       <div class="pub-num">03</div>
       <div>
-        <p class="pub-title">Accessible Digital Reconstruction and Mechanical Prediction of 3D-Printed Prosthetics</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2024</p>
-        <div class="pub-tags"><span class="pub-tag">Computer Vision</span><span class="pub-tag">Prosthetics</span><span class="pub-tag">Digital Reconstruction</span></div>
+        <p class="pub-title">Model-Based Verification for AI-Enabled Cyber-Physical Systems Through Guided Falsification of Temporal Logic Properties</p>
+        <p class="pub-meta">Yusuf, H. U. · <em>IEEE/ACM 4th International Conference on AI Engineering – Software Engineering for AI (CAIN 2025)</em> · 2025</p>
+        <div class="pub-tags"><span class="pub-tag">Falsification</span><span class="pub-tag">Temporal Logic</span><span class="pub-tag">CPS</span></div>
       </div>
     </div>
+
     <div class="pub-item">
       <div class="pub-num">04</div>
       <div>
-        <p class="pub-title">Towards Reliable DTMF Recognition: A TinyML Approach</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2023</p>
-        <div class="pub-tags"><span class="pub-tag">TinyML</span><span class="pub-tag">Signal Processing</span><span class="pub-tag">Edge AI</span></div>
+        <p class="pub-title">Accessible Digital Reconstruction and Mechanical Prediction of 3D-Printed Prosthetics</p>
+        <p class="pub-meta">Lee, J., Nkama, C., Yusuf, H. U., et al. · <em>Journal of Mechanical Design, 147(6), 062001</em> · 2025</p>
+        <div class="pub-tags"><span class="pub-tag">Computer Vision</span><span class="pub-tag">Prosthetics</span><span class="pub-tag">Machine Learning</span></div>
       </div>
     </div>
+
     <div class="pub-item">
       <div class="pub-num">05</div>
       <div>
-        <p class="pub-title">Orientation and its Significance on Skill Development: A Case Study of AcadoPreneurship Industry Immersion Programme for Students (IIP4S)</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2022</p>
-        <div class="pub-tags"><span class="pub-tag">Education</span><span class="pub-tag">Skill Development</span></div>
+        <p class="pub-title">Increasing Accessibility of 3D-Printed Customized Prosthetics in Resource-Constrained Communities</p>
+        <p class="pub-meta">Lee, J., Nkama, C., Yusuf, H. U., et al. · <em>ASME International Design Engineering Technical Conferences (IDETC/CIE 2024)</em> · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">3D Printing</span><span class="pub-tag">Accessibility</span><span class="pub-tag">Prosthetics</span></div>
       </div>
     </div>
+
     <div class="pub-item">
       <div class="pub-num">06</div>
       <div>
-        <p class="pub-title">Counterfactual-Guided Debugging of Cyber-Physical Systems (DeCaF)</p>
-        <p class="pub-meta">Yusuf, H. U., et al. · 2025 · Submitted for publication</p>
-        <div class="pub-tags"><span class="pub-tag">CPS</span><span class="pub-tag">Debugging</span><span class="pub-tag">Counterfactual AI</span></div>
+        <p class="pub-title">Inverse-Prediction of Material Property in Fused Filament Fabrication / Fused Deposition Modeling</p>
+        <p class="pub-meta">Lee, J., Yusuf, H. U., Tucker, C. · <em>ASME International Design Engineering Technical Conferences (IDETC/CIE 2024)</em> · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">3D Printing</span><span class="pub-tag">Material Science</span><span class="pub-tag">Deep Learning</span></div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-num">07</div>
+      <div>
+        <p class="pub-title">Towards Reliable DTMF Recognition: A TinyML Approach</p>
+        <p class="pub-meta">Yusuf, H., Perkins, M., Nkama, C. · <em>International Congress on Information and Communication Technology (ICICT 2024)</em> · 2024</p>
+        <div class="pub-tags"><span class="pub-tag">TinyML</span><span class="pub-tag">Signal Processing</span><span class="pub-tag">Edge AI</span></div>
       </div>
     </div>
   </div>
@@ -1101,7 +1120,7 @@
       <div>
         <span class="talk-type">Session Speaker</span>
         <p class="talk-title">Emerging Trends in Verification of AI-enabled Cyber-Physical Systems</p>
-        <p class="talk-venue">International Conference on Machine Learning, Artificial Intelligence and Data Science · <a href="#" style="color: var(--accent); text-decoration: none;">Speaker Profile</a></p>
+        <p class="talk-venue">International Conference on Machine Learning, Artificial Intelligence and Data Science · <a href="https://www.srcmeetings.com/profile/international-conference-on-machine-learning-artificial-intelligence-and-data-science-hadiza-umar-yusuf-1183.html" style="color: var(--accent); text-decoration: none;">Speaker Profile</a></p>
       </div>
     </div>
     <div class="talk-item">
@@ -1109,7 +1128,7 @@
       <div>
         <span class="talk-type">Presenter</span>
         <p class="talk-title">Searching for and Choosing Graduate Schools</p>
-        <p class="talk-venue">Ignite Research Academy Webinar · <a href="#" style="color: var(--accent); text-decoration: none;">Watch Video</a></p>
+        <p class="talk-venue">Ignite Research Academy Webinar · <a href="https://youtu.be/6KrBaZB36bE" style="color: var(--accent); text-decoration: none;">Watch Video</a></p>
       </div>
     </div>
   </div>
@@ -1126,36 +1145,40 @@
 
   <div class="news-list">
     <div class="news-item">
-      <div class="news-month">Mar 2026</div>
-      <p class="news-text">🎤 Invited as <strong>Session Speaker</strong> at the International Conference on ML, AI and Data Science — presenting on verification of AI-enabled CPS.</p>
+      <div class="news-month">Feb 2026</div>
+      <p class="news-text">🎉 Paper accepted at <strong>ICST 2026</strong> (IEEE International Conference on Software Testing, Verification and Validation) — <em>Towards Counterfactual Explanation and Assertion Inference for CPS Debugging (DeCaF)</em>, a framework that identifies minimal input changes to prevent failures in cyber-physical systems.</p>
     </div>
     <div class="news-item">
       <div class="news-month">Oct 2025</div>
-      <p class="news-text">🤝 Volunteered at the <strong>28th MODELS 2025 Conference</strong>, Grand Rapids, MI.</p>
+      <p class="news-text">🤝 Served as a <strong>Student Volunteer</strong> at the <strong>28th ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS 2025)</strong> in Grand Rapids, MI — one of the premier venues for model-driven engineering research.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Sep 2025</div>
+      <p class="news-text">🎤 Invited as <strong>Session Speaker</strong> at the <a href="https://www.srcmeetings.com/profile/international-conference-on-machine-learning-artificial-intelligence-and-data-science-hadiza-umar-yusuf-1183.html" target="_blank">International Conference on Machine Learning, Artificial Intelligence and Data Science</a> — to present on <em>Emerging Trends in Verification of AI-enabled Cyber-Physical Systems</em>.</p>
     </div>
     <div class="news-item">
       <div class="news-month">Aug 2025</div>
-      <p class="news-text">🙌 Joined the <strong>LifeWise Academy Dearborn</strong> as a Leadership Board Member.</p>
-    </div>
-    <div class="news-item">
-      <div class="news-month">May 2025</div>
-      <p class="news-text">📝 <strong>DeCaF paper submitted</strong> — Counterfactual-Guided Debugging of Cyber-Physical Systems.</p>
+      <p class="news-text">🙌 Joined the <strong>LifeWise Academy Dearborn</strong> as a <strong>Leadership Board Member</strong>, contributing to the mission of equipping students with character, wisdom, and a strong academic foundation.</p>
     </div>
     <div class="news-item">
       <div class="news-month">Apr 2025</div>
-      <p class="news-text">🎓 Joined <strong>Wolverine Mentors Collective</strong> as a graduate student mentor.</p>
-    </div>
-    <div class="news-item">
-      <div class="news-month">May 2024</div>
-      <p class="news-text">📰 Featured in a Mastercard Foundation Impact Story: <a href="https://mastercardfdn.org" target="_blank">"Everyone has something to give in their own little space"</a>.</p>
-    </div>
-    <div class="news-item">
-      <div class="news-month">May 2024</div>
-      <p class="news-text">🏆 Received the <strong>Mastercard Foundation Scholars Impact Award 2024</strong> and the <strong>Lakshimi Subramanian CMU-Africa Student Excellence Award</strong>.</p>
+      <p class="news-text">🎓 Joined the <strong>Wolverine Mentors Collective (Graduate Students Edition)</strong> as a mentor, supporting early-career graduate students in navigating research, academia, and professional development at the University of Michigan.</p>
     </div>
     <div class="news-item">
       <div class="news-month">Sep 2024</div>
-      <p class="news-text">🎉 Started <strong>PhD in Computer &amp; Information Sciences</strong> at University of Michigan-Dearborn. CQPA: 3.95/4.0.</p>
+      <p class="news-text">🎉 Began my <strong>PhD in Computer &amp; Information Sciences</strong> at the <strong>University of Michigan-Dearborn</strong>, joining the <strong>AISE-CPS Lab</strong> under the supervision of Professor Khouloud Gaaloul. My doctoral research focuses on falsification and verification of AI-enabled Cyber-Physical Systems — funded by the <strong>National Science Foundation (NSF)</strong>.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">May 2024</div>
+      <p class="news-text">📰 Featured in a <strong>Mastercard Foundation Impact Story</strong>: <a href="https://mastercardfdn.org/en/what-we-do/impact-stories/hadiza-yusuf-everyone-has-something-to-give-in-their-own-little-space/" target="_blank">"Everyone has something to give in their own little space"</a> — a story about my journey through academia, research, and giving back to communities across Africa.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">May 2024</div>
+      <p class="news-text">🏆 Graduated from <strong>Carnegie Mellon University Africa</strong> with an MS in Engineering Artificial Intelligence, receiving two prestigious awards: the <strong>Lakshimi Subramanian CMU-Africa Student Excellence Award</strong> — recognising outstanding academic and research contributions — and the <strong>Mastercard Foundation Scholars Impact Award</strong>, celebrating scholars who demonstrate exceptional commitment to transforming Africa through their work and leadership.</p>
+    </div>
+    <div class="news-item">
+      <div class="news-month">Apr 2024</div>
+      <p class="news-text">🎊 Received admission to the <strong>PhD program in Computer &amp; Information Sciences</strong> at the <strong>University of Michigan-Dearborn</strong> — set to join the AISE-CPS Lab to work with Professor Khouloud Gaaloul on NSF-funded research in AI safety and cyber-physical systems verification.</p>
     </div>
   </div>
 </section>
@@ -1188,7 +1211,7 @@
       </div>
       <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
     </div>
-    <div class="blog-card">
+    <!-- <div class="blog-card">
       <div class="blog-header">🎓</div>
       <div class="blog-body">
         <p class="blog-cat">Teaching & Mentorship</p>
@@ -1196,93 +1219,7 @@
         <p class="blog-excerpt">From high school classrooms in Niger State to graduate labs at CMU — reflections on what it really means to teach...</p>
       </div>
       <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- CV -->
-<section id="cv">
-  <div class="section-header">
-    <span class="section-label">07</span>
-    <h2>Curriculum Vitae</h2>
-  </div>
-
-  <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
-    <a href="assets/Hadiza_Yusuf_CV.pdf" class="btn-primary" target="_blank">Download Full CV (PDF)</a>
-  </div>
-
-  <div class="cv-section">
-    <p class="cv-section-title">Education</p>
-    <div class="cv-entry">
-      <div class="cv-year">Sept. 2024 –<br>April 2028</div>
-      <div>
-        <p class="cv-title">Doctor of Philosophy — Computer &amp; Information Sciences</p>
-        <p class="cv-org">University of Michigan-Dearborn, MI, United States</p>
-        <span class="cv-gpa">CQPA: 3.95 / 4.0</span>
-      </div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-year">Aug. 2022 –<br>May 2024</div>
-      <div>
-        <p class="cv-title">MS — Engineering Artificial Intelligence</p>
-        <p class="cv-org">Carnegie Mellon University Africa, Kigali, Rwanda</p>
-        <span class="cv-gpa">CQPA: 3.78 / 4.0</span>
-      </div>
-    </div>
-    <div class="cv-entry">
-      <div class="cv-year">Feb. 2014 –<br>Oct. 2018</div>
-      <div>
-        <p class="cv-title">B.Tech — Mathematics (minor: Statistics)</p>
-        <p class="cv-org">Federal University of Technology Minna, Nigeria</p>
-        <span class="cv-gpa">CGPA: 4.58 / 5.0</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="cv-section">
-    <p class="cv-section-title">Honors &amp; Scholarships</p>
-    <div class="award-item"><span class="award-year">2024</span> Lakshimi Subramanian CMU-Africa Student Excellence Award</div>
-    <div class="award-item"><span class="award-year">2024</span> Mastercard Foundation Scholars Impact Award</div>
-    <div class="award-item"><span class="award-year">2023</span> Future Leaders Climate, Aspen Institutes</div>
-    <div class="award-item"><span class="award-year">2022</span> Mastercard Foundation Scholarship</div>
-    <div class="award-item"><span class="award-year">2022</span> InterMaths Erasmus Mundus Partial Scholarship</div>
-    <div class="award-item"><span class="award-year">2018</span> Best Female Graduating Student — School of Physical Sciences, FUTM</div>
-    <div class="award-item"><span class="award-year">2018</span> Silver Medal — National Mathematical Competition for University Students (NMC Abuja)</div>
-  </div>
-
-  <div class="cv-section">
-    <p class="cv-section-title">Skills</p>
-    <div class="skills-grid">
-      <div>
-        <p class="skill-group-title">Proficient</p>
-        <div class="skill-pills">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">MATLAB</span>
-          <span class="skill-pill">Simulink</span>
-          <span class="skill-pill">PyTorch</span>
-          <span class="skill-pill">TensorFlow</span>
-          <span class="skill-pill">scikit-learn</span>
-          <span class="skill-pill">pandas</span>
-          <span class="skill-pill">NumPy</span>
-        </div>
-      </div>
-      <div>
-        <p class="skill-group-title">Familiar</p>
-        <div class="skill-pills">
-          <span class="skill-pill">C/C++</span>
-          <span class="skill-pill">Spark</span>
-          <span class="skill-pill">Hadoop</span>
-          <span class="skill-pill">OpenCV</span>
-          <span class="skill-pill">NLTK</span>
-          <span class="skill-pill">spaCy</span>
-          <span class="skill-pill">AWS</span>
-          <span class="skill-pill">Azure</span>
-          <span class="skill-pill">GCP</span>
-        </div>
-      </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -1311,14 +1248,14 @@
         <span class="contact-link-val">linkedin.com/in/hyusuf7</span>
       </div>
     </a>
-    <a href="https://github.com/Hadex-Pearl1" target="_blank" class="contact-link-item">
+    <a href="https://github.com/Hadex-Pearl" target="_blank" class="contact-link-item">
       <div class="contact-icon">⌥</div>
       <div>
         <span class="contact-link-label">GitHub</span>
-        <span class="contact-link-val">Hadex-Pearl1</span>
+        <span class="contact-link-val">Hadex-Pearl</span>
       </div>
     </a>
-    <a href="https://scholar.google.com/citations" target="_blank" class="contact-link-item">
+    <a href="https://scholar.google.com/citations?user=zffZglgAAAAJ&hl=en&authuser=1" target="_blank" class="contact-link-item">
       <div class="contact-icon">🎓</div>
       <div>
         <span class="contact-link-label">Google Scholar</span>
