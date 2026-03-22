@@ -1267,7 +1267,13 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Hadiza Umar Yusuf · Built with care · Hosted on Netlify</p>
+  <p>© <span id="year"></span> Hadiza Umar Yusuf · Last updated: <span id="lastUpdated"></span></p>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date(document.lastModified);
+    document.getElementById('lastUpdated').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  </script>
 </footer>
 
 </body>
