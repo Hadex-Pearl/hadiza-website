@@ -200,7 +200,7 @@
     }
 
     .hero-avatar {
-      width: 72px; height: 72px;
+      width: 180px; height: 180px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent-light), var(--accent-mid));
       display: flex; align-items: center; justify-content: center;
@@ -209,6 +209,7 @@
       color: var(--accent);
       margin-bottom: 1.2rem;
       position: relative; z-index: 1;
+      overflow: hidden;
     }
 
     .hero-card-name {
@@ -879,28 +880,12 @@
     </div>
 
     <div class="hero-card">
-      <img src="assets/photo.jpg" alt="Hadiza Yusuf" style="width:72px; height:72px; border-radius:50%; object-fit:cover; margin-bottom:1.2rem;" />
+      <div class="hero-avatar">
+        <img src="assets/photo.jpg" alt="Hadiza Yusuf" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      </div>
       <p class="hero-card-name">Hadiza Umar Yusuf</p>
       <p class="hero-card-role">AI &amp; CPS Safety Researcher</p>
 
-      <div class="stat-row">
-        <div class="stat-box">
-          <div class="stat-num">3.95</div>
-          <div class="stat-label">PhD GPA</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">6+</div>
-          <div class="stat-label">Publications</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">7</div>
-          <div class="stat-label">Awards</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Years Teaching</div>
-        </div>
-      </div>
 
       <div class="hero-card-links">
         <a href="mailto:hyusuf@umich.edu" class="chip-link">✉ Email</a>
