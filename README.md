@@ -1,6 +1,51 @@
-# Hadiza Yusuf — Personal Academic Website
+# Personal Academic Website — Hadiza Umar Yusuf
 
-A clean, minimal personal website built for GitHub + Netlify deployment.
+This is the source code for my personal academic website, live at **[hadiza-yusuf.netlify.app](https://hadiza-yusuf.netlify.app)**.
+
+## About
+
+I am a PhD candidate in Computer & Information Sciences at the **University of Michigan-Dearborn**, working in the AISE-CPS Lab under Professor Khouloud Gaaloul. My research focuses on the safety and verification of AI-enabled Cyber-Physical Systems, supported by the National Science Foundation (NSF).
+
+This site serves as a central hub for my research, publications, teaching experience, and academic journey.
+
+## What's on the Site
+
+- **About** — Bio and research overview
+- **Research** — Current and past research projects
+- **Publications** — Peer-reviewed papers in top venues
+- **Teaching** — Teaching roles and experience
+- **Talks & Presentations** — Conference talks and invited speaking engagements
+- **News** — Recent academic highlights and milestones
+- **Blog** — Reflections on research, teaching, and academia
+- **Contact** — Ways to reach me
+
+## Built With
+
+- Plain HTML & CSS — no frameworks, no build tools
+- [Lora](https://fonts.google.com/specimen/Lora) & [DM Sans](https://fonts.google.com/specimen/DM+Sans) (Google Fonts)
+- Hosted on [Netlify](https://netlify.com) with continuous deployment from this repository
+
+## Structure
+
+```
+hadiza-website/
+├── index.html               ← Entire website (single file)
+├── assets/
+│   ├── photo.jpg            ← Profile photo
+│   └── Hadiza_Yusuf_CV.pdf  ← Downloadable CV
+└── README.md
+```
+
+## Contact
+
+- 📧 hyusuf@umich.edu
+- 🔗 [linkedin.com/in/hyusuf7](https://www.linkedin.com/in/hyusuf7)
+- 🎓 [Google Scholar](https://scholar.google.com/citations?user=zffZglgAAAAJ)
+- 💻 [GitHub @Hadex-Pearl1](https://github.com/Hadex-Pearl1)
+
+---
+
+*Feel free to use this as inspiration for your own academic website. If you do, a mention or star would be appreciated!*
 
 ## 📁 Folder Structure
 
