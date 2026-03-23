@@ -90,7 +90,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 420px 1fr;
       gap: 80px;
       align-items: center;
       width: 100%;
@@ -125,6 +125,7 @@
       max-width: 480px;
       margin-bottom: 1.8rem;
       line-height: 1.75;
+      text-align: justify;
     }
 
     .hero-tags {
@@ -863,9 +864,26 @@
 <!-- ABOUT / HERO -->
 <section id="about" style="padding-top: 100px;">
   <div class="hero-grid">
+
+    <div class="hero-card">
+      <div class="hero-avatar">
+        <img src="assets/photo.jpg" alt="Hadiza Yusuf" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      </div>
+      <p class="hero-card-name">Hadiza Umar Yusuf</p>
+      <p class="hero-card-role">AI &amp; CPS Safety Researcher</p>
+
+
+      <div class="hero-card-links">
+        <a href="mailto:hyusuf@umich.edu" class="chip-link">✉ Email</a>
+        <a href="https://www.linkedin.com/in/hyusuf7" target="_blank" class="chip-link">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=zffZglgAAAAJ&hl=en&authuser=1" target="_blank" class="chip-link">Scholar</a>
+        <a href="https://github.com/Hadex-Pearl" target="_blank" class="chip-link">GitHub</a>
+      </div>
+    </div>
+
     <div class="hero-left">
       <p class="hero-eyebrow">PhD Candidate · University of Michigan-Dearborn</p>
-      <h1>Hadiza<br>Umar Yusuf</h1>
+      <h1>Hadiza Umar Yusuf</h1>
       <p class="hero-tagline">
         I am a doctoral candidate in Computer & Information Sciences at the <strong>University of Michigan-Dearborn</strong> and a Graduate Research Assistant at the <strong>AISE-CPS Lab</strong>. I am passionate about the safety and reliability of AI systems, especially for cyber-physical systems that operate in the real world where failures have real consequences.
         <br><br>
@@ -884,21 +902,6 @@
       </div>
     </div>
 
-    <div class="hero-card">
-      <div class="hero-avatar">
-        <img src="assets/photo.jpg" alt="Hadiza Yusuf" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
-      </div>
-      <p class="hero-card-name">Hadiza Umar Yusuf</p>
-      <p class="hero-card-role">AI &amp; CPS Safety Researcher</p>
-
-
-      <div class="hero-card-links">
-        <a href="mailto:hyusuf@umich.edu" class="chip-link">✉ Email</a>
-        <a href="https://www.linkedin.com/in/hyusuf7" target="_blank" class="chip-link">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=zffZglgAAAAJ&hl=en&authuser=1" target="_blank" class="chip-link">Scholar</a>
-        <a href="https://github.com/Hadex-Pearl" target="_blank" class="chip-link">GitHub</a>
-      </div>
-    </div>
   </div>
 </section>
 
