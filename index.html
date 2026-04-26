@@ -856,7 +856,7 @@
     <li><a href="#teaching">Teaching</a></li>
     <li><a href="#talks">Talks</a></li>
     <li><a href="#news">News</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="#blog">Newsletter</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -1188,41 +1188,58 @@
 
 <div class="section-divider"></div>
 
-<!-- BLOG -->
+<!-- NEWSLETTER -->
 <section id="blog">
   <div class="section-header">
     <span class="section-label">06</span>
-    <h2>Blog</h2>
+    <h2>Newsletter</h2>
   </div>
+
+  <p style="font-size: 15px; color: var(--ink-muted); max-width: 620px; margin-bottom: 2rem; line-height: 1.75;">
+    I write <strong>The AI Safety Brief</strong>; a LinkedIn weekly newsletter on AI safety, alignment, and ethics. The letter discusses different AI safety research papers, articles and incidences, to spur curiousity and open up ideas for those seeking research direction in AI safety.
+  </p>
+
+  <a href="https://www.linkedin.com/newsletters/the-ai-safety-brief-7444519042897522688/" target="_blank" class="btn-primary" style="margin-bottom: 3rem; display: inline-block;">
+    Subscribe on LinkedIn →
+  </a>
 
   <div class="blog-grid">
     <div class="blog-card">
-      <div class="blog-header">🤖</div>
+      <div class="blog-header">🛡️</div>
       <div class="blog-body">
-        <p class="blog-cat">AI Safety</p>
-        <p class="blog-title">Why Falsification Matters: Testing AI Systems Before They Fail in the Real World</p>
-        <p class="blog-excerpt">How stochastic optimization and RL can be combined to find safety violations in autonomous systems before deployment...</p>
+        <p class="blog-cat">The AI Safety Brief</p>
+        <p class="blog-title">When You Lock the Gate but Leave the Fence Broken</p>
+        <p class="blog-excerpt">When AI safety alignment fails not through a direct attack, but through something as routine as a writing task — what does that tell us about how robust our safety tools really are?</p>
       </div>
-      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
+      <div class="blog-footer">
+        <span>On LinkedIn</span>
+        <a href="https://www.linkedin.com/pulse/safe-sorry-when-you-lock-gate-leave-fence-broken-hadiza-yusuf-ofroc/?trackingId=tZ5I9ccNRqeyYH2Ud7yhEg%3D%3D" target="_blank" class="blog-read">Read →</a>
+      </div>
     </div>
     <div class="blog-card">
-      <div class="blog-header">🦾</div>
+      <div class="blog-header">⚙️</div>
       <div class="blog-body">
-        <p class="blog-cat">Research Journey</p>
-        <p class="blog-title">From Nigeria to Rwanda to Michigan: Navigating Global STEM Academia as an African Researcher</p>
-        <p class="blog-excerpt">Lessons learned about finding mentors, applying for scholarships, and building a research identity across continents...</p>
+        <p class="blog-cat">The AI Safety Brief</p>
+        <p class="blog-title">The Model That Could Not Be Released</p>
+        <p class="blog-excerpt">Anthropic built a model capable enough to find decade-old security vulnerabilities on its own — and then decided not to release it. A closer look at what that decision reveals about where AI safety stands today.</p>
       </div>
-      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
+      <div class="blog-footer">
+        <span>On LinkedIn</span>
+        <a href="https://www.linkedin.com/pulse/saturdays-safety-safe-sorry-hadiza-yusuf-tyxhc/?trackingId=W6VycYc%2FThy4delSuiqs8Q%3D%3D" target="_blank" class="blog-read">Read →</a>
+      </div>
     </div>
-    <!-- <div class="blog-card">
-      <div class="blog-header">🎓</div>
+    <div class="blog-card">
+      <div class="blog-header">🤝</div>
       <div class="blog-body">
-        <p class="blog-cat">Teaching & Mentorship</p>
-        <p class="blog-title">What 10 Years of Teaching Taught Me About Learning</p>
-        <p class="blog-excerpt">From high school classrooms in Niger State to graduate labs at CMU — reflections on what it really means to teach...</p>
+        <p class="blog-cat">The AI Safety Brief</p>
+        <p class="blog-title">Trustworthy AI is not just a technical problem</p>
+        <p class="blog-excerpt">Building AI systems people can trust involves more than good algorithms — it requires ethics, transparency, and accountability.</p>
       </div>
-      <div class="blog-footer"><span>Coming soon</span><a href="#" class="blog-read">Read →</a></div>
-    </div> -->
+      <div class="blog-footer">
+        <span>Coming Soon</span>
+        <a href="https://www.linkedin.com/newsletters/the-ai-safety-brief-7444519042897522688/" target="_blank" class="blog-read">Read →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1274,8 +1291,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const d = new Date(document.lastModified);
-    document.getElementById('lastUpdated').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('lastUpdated').textContent = "April 11, 2026";
   </script>
 </footer>
 
